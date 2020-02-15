@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;   
+}
+
+h1 {
+    font-size: 63px;
+    font-weight: 500;
+}
+
+/* Override Angular Material styles */
+
+.mat-app-background {
+    color:#333;
+}
+
+.mat-toolbar {
+    background: #333;
+    color: #ccc;
+    font-size: 11pt;
+    display: flex;
+}
+
+.mat-toolbar a {
+    color: #ccc;   
+    text-decoration: none;
+}
+.mat-toolbar-filler {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}

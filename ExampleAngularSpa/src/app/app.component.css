@@ -1,0 +1,67 @@
+.my-jumbotron {
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 40px;
+    width: 75%;
+}
+
+.my-jumbotron p {
+    font-size: 21px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+#your-name {
+    display: inline-block;
+    font-style: italic;
+    margin-right: 25px;
+}
+
+#signed-in {
+    color: green;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+#display {
+    margin: 20px auto; 
+    width: 70%;
+}
+
+#jwt {
+    /* margin: 20px auto; */ 
+    width: 25%; 
+    float:left;
+    background-color: #fcfcfc; 
+    border-radius: 5px; 
+    border:1px solid #ddd; 
+    font-family: 'Courier New', Helvetica, sans-serif;
+    font-size: 10pt;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    padding: 5px;
+}
+
+#call-webapi {
+    /* margin: 20px auto; */
+    width: 65%;
+    float:right;
+}
+
+#api-result {
+    background-color: #fcfcfc; 
+    border-radius: 5px; 
+    border:1px solid #ddd; 
+    font-family: 'Courier New', Helvetica, sans-serif;
+    font-size: 10pt;
+    height:100px; 
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    padding: 5px;
+}
+
+.spinner { 
+    margin: 20px auto;
+    opacity: .7;
+}

@@ -1,0 +1,41 @@
+<mat-toolbar>
+    <span>Home</span>
+    <span class="mat-toolbar-filler">
+        &nbsp;
+    </span>
+    <div *ngIf="isSignedIn">
+            <span id="your-name">Welcome, {{fullName}}</span>
+            <a [href]="ssoSignOutUrl" >Logout</a>   
+    </div>
+</mat-toolbar>
+
+<div class="my-jumbotron">
+
+  <h1>Example Angular SPA</h1>
+  <p>This example demonstrates using the SustainSys SAML library to single sign-on as the service provider.  
+     Once SSO completes, a JWT is securely requested from the server and included with subsequent web API calls.
+  </p>
+
+  <a [href]="ssoSignOnUrl" *ngIf="!isSignedIn" mat-flat-button color="primary">SSO to the Identity Provider</a>
+  <div id="signed-in" *ngIf="isSignedIn">You are signed in!</div>
+</div>
+
+<div id="display" *ngIf="isSignedIn">
+    <div id="jwt">
+        <strong>JWT:</strong><br/>{{jwtString}}
+    </div>
+    <div id="call-webapi">
+            <div id="api-result" *ngIf="isSignedIn">
+                    {{apiResult}}
+
+                    <mat-progress-spinner *ngIf="isSpinnerVisible"
+                    class="spinner"
+                    [diameter]="40"
+                    [color]="color"
+                    [mode]="mode"
+                    [value]="value">
+                    </mat-progress-spinner>
+            </div>
+            <button *ngIf="isSignedIn" mat-flat-button color="warn" (click)="onClick()">Call WebAPI</button>
+    </div>
+</div>
